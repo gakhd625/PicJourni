@@ -10,7 +10,7 @@ interface TimelineViewProps {
 const TimelineView = ({ pins, onPinClick }: TimelineViewProps) => {
   const sortedPins = [...pins].sort((a, b) => new Date(b.visitDate).getTime() - new Date(a.visitDate).getTime());
 
-  const formatDate = (date: Date) => {
+  const formatDate = (date: Date) => {  
     return new Intl.DateTimeFormat('en-US', {
       year: 'numeric',
       month: 'long',
@@ -33,6 +33,7 @@ const TimelineView = ({ pins, onPinClick }: TimelineViewProps) => {
       <h2 className="text-2xl font-bold bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text text-transparent">
         Your Travel Timeline
       </h2>
+      
       
       <div className="space-y-4">
         {sortedPins.map((pin, index) => (
