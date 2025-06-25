@@ -10,7 +10,7 @@ interface TimelineViewProps {
 const TimelineView = ({ pins, onPinClick }: TimelineViewProps) => {
   const sortedPins = [...pins].sort((a, b) => new Date(b.visitDate).getTime() - new Date(a.visitDate).getTime());
 
-  const formatDate = (date: Date) => {
+  const formatDate = (date: Date) => {  
     return new Intl.DateTimeFormat('en-US', {
       year: 'numeric',
       month: 'long',
