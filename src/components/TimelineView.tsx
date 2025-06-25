@@ -34,7 +34,6 @@ const TimelineView = ({ pins, onPinClick }: TimelineViewProps) => {
         Your Travel Timeline
       </h2>
       
-      
       <div className="space-y-4">
         {sortedPins.map((pin, index) => (
           <div
